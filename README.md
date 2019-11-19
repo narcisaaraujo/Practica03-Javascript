@@ -10,6 +10,6 @@
 <ul>
   <li>Como resultados obtenidos tenemos la validación de campos de un formulario y la galería de imágenes usando javascript. </li>
     <li>Usuario de GITHUB: narcisaaraujo</li>
-  <li>•	URL del repositorio de la práctica: https://github.com/narcisaaraujo/Practica03–Javascript</li>
+
 </ul>
 </ul>
