@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<title>FORMULARIO</title>
+
+<head>
+    <title>FORMULARIO</title>
+    <meta charset="utf-8" />
+    <link href="Formulario.css" rel="stylesheet" />
+    <script type="text/javascript" src="validacion_usuario.js"></script>
+</head>
+
+<body>
+
+    <form id="formulario01" method="POST" action="crear_usuario.php"
+        onsubmit="return validarCamposObligatorios()">
+
+        <label for="cedula">Cedula (*)</label>
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
+            maxlength="10" onblur="validarCedula()" />
+        <span id="mensajeCedula"></span>
+        <br>
+
+        <label for="nombres">Nombres (*)</label>
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres..." maxlength="50"
+            onkeypress="return vaLetras(event);" onKeyUp="this.value = this.value.toUpperCase();" />
+        <span id="mensajeNombre"></span>
+        <br>
+
+        <label for="apellidos">Apelidos (*)</label>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos..."
+            maxlength="50" onkeypress="return vaLetras(event);" onKeyUp="this.value = this.value.toUpperCase();" />
+        <span id="mensajeApellido"></span>
+        <br>
+
+        <label for="direccion">Dirección (*)</label>
+        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..."
+            maxlength="75" onKeyUp="this.value = this.value.toUpperCase();" />
+        <span id="mensajeDireccion"></span>
+        <br>
+
+        <label for="telefono">Teléfono (*)</label>
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico..."
+            maxlength="20" onkeypress="return numeros(event);" />
+        <span id="mensajeTelefono"></span>
+        <br>
+
+        <label for="fecha">Fecha Nacimiento (*)</label>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="DD/MM/YYYY" maxlength="10"
+        onKeyUp="ValidarFecha();" />
+        <span id="mensajeFecha"> </span>
+        <br>
+
+        <label for="correo">Correo electrónico (*)</label>
+        <input type="text" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico..."
+            maxlength="20" onblur="return validarCorreo(this)"/>
+        <span id="mensajeCorreo"></span>
+        <br>
+
+        <label for="contraseña">Contraseña (*)</label>
+        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña..."
+            maxlength="255" />
+        <span id="mensajeContraseña"></span>
+        <br>
+        <br>
+
+        <input type="submit" id="crear" name="crear" value="Aceptar" />
+        <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+
+    </form>
+</body>
+
+</html>
